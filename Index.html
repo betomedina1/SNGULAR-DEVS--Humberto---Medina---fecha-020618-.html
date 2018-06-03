@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+    .titulo{
+        color: red;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: 30pt;
+    }
+    .inputtexto{
+    color: blue;
+    }
+    .btncolor{
+     background-color: green;
+    }
+    </style>
+    <h1 id="titulo1">titulo</h1>
+    <input id="input1" type="text">
+   <button id="btn1">boton</button>
+   <button id="btn2">boton2</button>
+</body>
+<script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+  <script>
+   $(document).ready(function () {
+    alert("estoy funcionando");
+});
+
+$("#btn1").click(function (e) {
+    var titulo = document.getElementById('titulo1'); 
+    var inpu = document.getElementById('input1'); 
+    var btn = document.getElementById('btn1'); 
+    cambiarestilo(titulo,inpu,btn);  
+});
+const cambiarestilo = (idtitulo,idimput,idboton) =>{
+    $(idtitulo).addClass('titulo');
+    $(idimput).addClass('inputtexto');
+    $(idboton).addClass('btncolor');
+}
+
+$("#btn2").click(function (e) { 
+   var tit = document.getElementById('titulo1');
+   var idim = document.getElementById('input1');
+   var idb = document.getElementById('bnt1'); 
+   segundoestilo(tit,idim,idb);
+});
+
+const segundoestilo = (idtitulo,idimput,idboton) => {
+$(idtitulo).removeClass('titulo');
+$(idimput).removeClass('inputtexto');
+$(idboton).removeClass('btncolor');
+}
+  </script>
+</html>
